@@ -1,0 +1,151 @@
+.molecule-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clear-button:hover {
+    background-color: #d8dee9;
+}
+
+.suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #d8dee9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    max-height: 240px;
+    overflow-y: auto;
+    margin-top: 8px;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f2f4f8;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f9fafb;
+}
+
+.suggestion-name {
+    font-weight: 500;
+    color: #4c566a;
+}
+
+.suggestion-smiles {
+    font-size: 12px;
+    color: #9ca3af;
+    font-family: monospace;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .molecule-name-input, .molecule-input {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .input-label {
+        font-size: 13px;
+    }
+
+    .input-label-active {
+        transform: translateY(-22px);
+        font-size: 11px;
+    }
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 14px;
+    color: #9ca3af;
+    transition: all 0.2s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.input-label-active {
+    transform: translateY(-24px);
+    font-size: 12px;
+    font-weight: 500;
+    color: #5e81ac;
+}
+
+.molecule-name-input-wrapper {
+    position: relative;
+}
+
+.molecule-name-input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d8dee9;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: white;
+}
+
+.molecule-name-input:focus {
+    border-color: #5e81ac;
+    box-shadow: 0 0 0 2px rgba(94, 129, 172, 0.2);
+}
+
+.molecule-input-wrapper {
+    position: relative;
+}
+
+.molecule-input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d8dee9;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: white;
+    font-family: monospace;
+}
+
+.molecule-input:focus {
+    border-color: #5e81ac;
+    box-shadow: 0 0 0 2px rgba(94, 129, 172, 0.2);
+}
+
+.clear-button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e5e9f0;
+    color: #4c566a;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.2s;
+}

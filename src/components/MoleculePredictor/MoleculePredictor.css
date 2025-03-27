@@ -1,0 +1,231 @@
+.predictor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 16px;
+}
+
+.predictor-card {
+    width: 100%;
+    max-width: 900px;
+    padding: 32px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.predictor-header {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    color: #3b4252;
+    letter-spacing: 1px;
+}
+
+.predictor-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Для экранов шириной больше 768px переключаемся на горизонтальную компоновку */
+@media (min-width: 768px) {
+    .predictor-content {
+        flex-direction: row;
+    }
+
+    .predictor-input-column {
+        max-width: 400px;
+    }
+}
+
+.predictor-input-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4c566a;
+    margin-bottom: -16px;
+}
+
+.predictor-visual-column {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.predictor-button {
+    flex: 1;
+    padding: 16px;
+    color: white;
+    background-color: #5e81ac;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(94, 129, 172, 0.2);
+    font-weight: 500;
+}
+
+.predictor-button:hover:not(:disabled) {
+    background-color: #4c6f96;
+    box-shadow: 0 6px 8px rgba(94, 129, 172, 0.3);
+}
+
+.predictor-button-disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.secondary-button {
+    padding: 16px;
+    color: #5e81ac;
+    background-color: white;
+    border: 1px solid #5e81ac;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.secondary-button:hover {
+    background-color: #eceff4;
+}
+
+/* Спиннер загрузки */
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* История предсказаний */
+.history-section {
+    margin-top: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: #f3f4f6;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 13px;
+}
+
+.history-item:hover {
+    background-color: #f9fafb;
+}
+
+.history-item-smiles {
+    flex: 1;
+    margin-right: 12px;
+    color: #4b5563;
+}
+
+.history-item-value {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: #5e81ac;
+}
+
+.history-item-time {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-left: 12px;
+}
+
+.toxicity-badge {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.toxicity-badge.high {
+    background-color: #bf616a;
+}
+
+.toxicity-badge.medium {
+    background-color: #d08770;
+}
+
+.toxicity-badge.low {
+    background-color: #8fbcbb;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.predictor-footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.version-info {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
