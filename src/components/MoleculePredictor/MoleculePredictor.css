@@ -14,6 +14,7 @@
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
 .predictor-header {
@@ -23,6 +24,18 @@
     text-align: center;
     color: #3b4252;
     letter-spacing: 1px;
+}
+
+.pubchem-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: #5e81ac;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .predictor-content {
@@ -164,13 +177,15 @@
     padding: 10px 16px;
     border-top: 1px solid #e5e7eb;
     font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .history-item:hover {
     background-color: #f9fafb;
 }
 
-.history-item-smiles {
+.history-item-name {
     flex: 1;
     margin-right: 12px;
     color: #4b5563;
@@ -222,6 +237,22 @@
     text-align: center;
     color: #6b7280;
     font-size: 14px;
+}
+
+.pubchem-credit {
+    font-size: 12px;
+    color: #5e81ac;
+    margin-top: 4px;
+}
+
+.pubchem-credit a {
+    color: #5e81ac;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pubchem-credit a:hover {
+    text-decoration: underline;
 }
 
 .version-info {

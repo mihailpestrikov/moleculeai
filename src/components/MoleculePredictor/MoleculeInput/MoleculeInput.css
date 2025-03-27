@@ -4,72 +4,6 @@
     gap: 16px;
 }
 
-.clear-button:hover {
-    background-color: #d8dee9;
-}
-
-.suggestions-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #d8dee9;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    z-index: 10;
-    max-height: 240px;
-    overflow-y: auto;
-    margin-top: 8px;
-}
-
-.suggestion-item {
-    padding: 12px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border-bottom: 1px solid #f2f4f8;
-}
-
-.suggestion-item:last-child {
-    border-bottom: none;
-}
-
-.suggestion-item:hover {
-    background-color: #f9fafb;
-}
-
-.suggestion-name {
-    font-weight: 500;
-    color: #4c566a;
-}
-
-.suggestion-smiles {
-    font-size: 12px;
-    color: #9ca3af;
-    font-family: monospace;
-    margin-top: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 480px) {
-    .molecule-name-input, .molecule-input {
-        padding: 14px;
-        font-size: 14px;
-    }
-
-    .input-label {
-        font-size: 13px;
-    }
-
-    .input-label-active {
-        transform: translateY(-22px);
-        font-size: 11px;
-    }
-}
-
 .input-field {
     position: relative;
 }
@@ -83,6 +17,17 @@
     transition: all 0.2s;
     pointer-events: none;
     z-index: 1;
+}
+
+.molecule-ai {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: #5e81ac;
+    transition: all 0.2s;
+    pointer-events: none;
+    z-index: 1;
+    font: bold 16px "Roboto", sans-serif;
 }
 
 .input-label-active {
@@ -148,4 +93,128 @@
     justify-content: center;
     font-size: 16px;
     transition: all 0.2s;
+}
+
+.clear-button:hover {
+    background-color: #d8dee9;
+}
+
+.input-loading-indicator {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(94, 129, 172, 0.2);
+    border-top-color: #5e81ac;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #d8dee9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    max-height: 240px;
+    overflow-y: auto;
+    margin-top: 8px;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f2f4f8;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f9fafb;
+}
+
+.suggestion-name {
+    font-weight: 500;
+    color: #4c566a;
+}
+
+.suggestion-smiles {
+    font-size: 12px;
+    color: #9ca3af;
+    font-family: monospace;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.suggestion-info {
+    font-size: 11px;
+    color: #5e81ac;
+    margin-top: 4px;
+}
+
+.suggestion-too-short {
+    padding: 16px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.suggestion-loading {
+    padding: 16px;
+    text-align: center;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.suggestion-no-results {
+    padding: 16px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.input-info-message {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: -8px;
+    font-style: italic;
+}
+
+
+@media (max-width: 480px) {
+    .molecule-name-input, .molecule-input {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .input-label {
+        font-size: 13px;
+    }
+
+    .input-label-active {
+        transform: translateY(-22px);
+        font-size: 11px;
+    }
 }

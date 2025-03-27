@@ -1,3 +1,3 @@
-import MoleculePredictor from './MoleculePredictor.jsx';
+import MoleculePredictor from "./MoleculePredictor.jsx";
 
 export default MoleculePredictor;
