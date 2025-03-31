@@ -137,7 +137,6 @@
     margin-bottom: 4px;
 }
 
-/* Адаптивность для мобильных устройств */
 @media (min-width: 500px) {
     .prediction-main {
         flex-direction: row;

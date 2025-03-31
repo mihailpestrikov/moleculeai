@@ -128,7 +128,6 @@ const MoleculeInput = ({ moleculeName, setMoleculeName, onClear }) => {
 
   return (
     <div className="molecule-input-group">
-      {/* Поле ввода названия молекулы */}
       <div className="input-field">
         <label
           className={`input-label ${isFocused.name || nameQuery ? "input-label-active" : ""}`}
@@ -182,7 +181,6 @@ const MoleculeInput = ({ moleculeName, setMoleculeName, onClear }) => {
         </div>
       </div>
 
-      {/* Поле ввода SMILES */}
       <div className="input-field">
         <label
           className={`input-label ${isFocused.smiles || moleculeName ? "input-label-active" : ""}`}

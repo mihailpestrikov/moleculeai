@@ -143,7 +143,6 @@
     to { transform: rotate(360deg); }
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .molecule-container {
         width: 100%;

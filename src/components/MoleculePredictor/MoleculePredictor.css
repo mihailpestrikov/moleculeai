@@ -44,7 +44,6 @@
     gap: 32px;
 }
 
-/* Для экранов шириной больше 768px переключаемся на горизонтальную компоновку */
 @media (min-width: 768px) {
     .predictor-content {
         flex-direction: row;
@@ -120,7 +119,6 @@
     background-color: #eceff4;
 }
 
-/* Спиннер загрузки */
 .spinner-container {
     display: flex;
     align-items: center;
@@ -141,7 +139,6 @@
     to { transform: rotate(360deg); }
 }
 
-/* История предсказаний */
 .history-section {
     margin-top: 8px;
     border: 1px solid #e5e7eb;
