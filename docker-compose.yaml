@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  toxicity-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - toxicity-backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080
+    restart: unless-stopped
