@@ -257,3 +257,37 @@
     color: #9ca3af;
     margin-top: 4px;
 }
+
+.api-error-message {
+    background-color: rgba(191, 97, 106, 0.1);
+    border-left: 3px solid #bf616a;
+    color: #bf616a;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.api-error-message p {
+    margin: 0;
+}
+
+.api-connection-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.api-connection-badge.connected {
+    background-color: #a3be8c;
+    color: white;
+}
+
+.api-connection-badge.disconnected {
+    background-color: #bf616a;
+    color: white;
+}

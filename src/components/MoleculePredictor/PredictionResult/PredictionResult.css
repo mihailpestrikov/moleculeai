@@ -150,3 +150,15 @@
         flex: 2;
     }
 }
+
+.data-source {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 8px;
+    text-align: right;
+    font-style: italic;
+}
+
+.data-source.loading {
+    color: #5e81ac;
+}
